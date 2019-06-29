@@ -1,7 +1,8 @@
-# デフォルト設定でonにしているもの
+# Krabiner-Elements
 
-## Shift+Spaceで半角全角を切替
-For Japanese -> Change Space Key -> Shift+Space To KANA/EISU(toggle)
-
-## カナキーをオプション(左)へ
-For Japanese -> Change Space Key -> KANA to Option_L
+## 設定ファイル置き場
+```
+~/.config/karabiner/assets/complex_modifications/
+```
+## 参考
+- https://qiita.com/s-show/items/a1fd228b04801477729c

@@ -1,0 +1,23 @@
+{
+  "title": "tebine設定",
+  "rules": [
+    {
+      "description": "descriptionだけ記述"
+    },
+    {
+      "description": "Ctrl + J でエンター",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "j",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {"key_code": "return_or_enter"}
+          ]
+        }
+      ]
+    }
+  ]
+}
