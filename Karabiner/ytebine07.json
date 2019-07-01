@@ -17,7 +17,7 @@
       ]
     },
     {
-      "description": "英数をCommandへ",
+      "description": "「英数」をCommandへ",
       "manipulators": [
         {
           "type": "basic",
@@ -26,6 +26,28 @@
           },
           "to": [
             {"key_code": "left_gui"}
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Alfredを必ず「英数」で起動する",
+      "comment":"https://log.brdr.jp/post/277",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "r",
+              "modifiers":{"mandatory":["left_gui"]}
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": ["left_gui"]
+            },
+            {
+              "key_code": "japanese_eisuu"
+            }
           ]
         }
       ]
