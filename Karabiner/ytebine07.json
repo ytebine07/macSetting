@@ -1,9 +1,6 @@
 {
-  "title": "tebine設定",
+  "title": "ytebine07設定",
   "rules": [
-    {
-      "description": "descriptionだけ記述"
-    },
     {
       "description": "Ctrl + J でエンター",
       "manipulators": [
