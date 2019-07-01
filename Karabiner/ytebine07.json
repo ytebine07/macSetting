@@ -15,6 +15,20 @@
           ]
         }
       ]
+    },
+    {
+      "description": "英数をCommandへ",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "lang2"
+          },
+          "to": [
+            {"key_code": "left_gui"}
+          ]
+        }
+      ]
     }
   ]
 }
