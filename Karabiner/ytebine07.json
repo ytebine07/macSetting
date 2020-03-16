@@ -2,7 +2,7 @@
   "title": "ytebine07設定",
   "rules": [
     {
-      "description": "Ctrl + J でエンター",
+      "description": "Ctrl + J でエンターだよ",
       "manipulators": [
         {
           "type": "basic",
@@ -47,6 +47,56 @@
             },
             {
               "key_code": "japanese_eisuu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[Chrome]Ctrl + n でDown(検索サジェスト選択用)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "n",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[Chrome]Ctrl + p でUp(検索サジェスト選択用)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "p",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome"
+              ]
             }
           ]
         }
