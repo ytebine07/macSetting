@@ -8,24 +8,10 @@
           "type": "basic",
           "from": {
               "key_code": "j",
-              "modifiers":{"mandatory":["left_control"]}
+              "modifiers":{"mandatory":["control"]}
           },
           "to": [
             {"key_code": "return_or_enter"}
-          ]
-        }
-      ]
-    },
-    {
-      "description": "「英数」をCommandへ",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-              "key_code": "lang2"
-          },
-          "to": [
-            {"key_code": "left_gui"}
           ]
         }
       ]
@@ -38,12 +24,12 @@
           "type": "basic",
           "from": {
               "key_code": "r",
-              "modifiers":{"mandatory":["left_gui"]}
+              "modifiers":{"mandatory":["left_option"]}
           },
           "to": [
             {
               "key_code": "r",
-              "modifiers": ["left_gui"]
+              "modifiers": ["left_option"]
             },
             {
               "key_code": "japanese_eisuu"
@@ -89,6 +75,32 @@
           "to": [
             {
               "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.google\\.Chrome"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[Chrome]Ctrl + wでタブを削除",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "w",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": ["command"]
             }
           ],
           "conditions": [
