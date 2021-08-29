@@ -113,6 +113,31 @@
           ]
         }
       ]
+    },
+    {
+      "description": "[Clipy]Ctrl + hで左移動",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "h",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.clipy-app\\.Clipy"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
