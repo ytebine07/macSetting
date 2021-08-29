@@ -138,6 +138,72 @@
           ]
         }
       ]
+    },
+    {
+      "description": "[GoogleIME]英語入力時にShift + spaceで日本語入力",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "spacebar",
+              "modifiers":{"mandatory":["left_shift"]}
+          },
+          "to": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources" : [
+                {
+                  "input_source_id" : "^com\\.google\\.inputmethod\\.Japanese.Roman$"
+                },
+                {
+                  "input_mode_id" : "^com\\.apple\\.inputmethod\\.Roman$"
+                },
+                {
+                  "language" : "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[GoogleIME]日本語入力時にShift + spaceで英語入力",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "spacebar",
+              "modifiers":{"mandatory":["left_shift"]}
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources" : [
+                {
+                  "input_source_id" : "^com\\.google\\.inputmethod\\.Japanese.base$"
+                },
+                {
+                  "input_mode_id" : "^com\\.apple\\.inputmethod\\.Japanese$"
+                },
+                {
+                  "language" : "ja"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
