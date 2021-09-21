@@ -204,6 +204,38 @@
           ]
         }
       ]
+    },
+    {
+      "description": "[Evernote]Ctrl + aで行頭へ",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+              "key_code": "a",
+              "modifiers":{"mandatory":["left_control"]}
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            },
+            {
+              "key_code" : "e",
+              "modifiers":["control"]
+            },
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.evernote\\.Evernote"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
