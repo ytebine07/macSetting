@@ -24,12 +24,12 @@
           "type": "basic",
           "from": {
               "key_code": "r",
-              "modifiers":{"mandatory":["left_option"]}
+              "modifiers":{"mandatory":["left_command"]}
           },
           "to": [
             {
               "key_code": "r",
-              "modifiers": ["left_option"]
+              "modifiers": ["left_command"]
             },
             {
               "key_code": "japanese_eisuu"
