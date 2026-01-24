@@ -338,6 +338,33 @@
           ]
         }
       ]
+    },
+    {
+      "description": "[Obsidian]Ctrl+CでEISUUとEscape",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^md\\.obsidian$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            { "key_code": "japanese_eisuu" },
+            { "key_code": "escape" }
+          ]
+        }
+      ]
     }
   ]
 }
