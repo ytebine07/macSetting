@@ -365,6 +365,65 @@
           ]
         }
       ]
+    },
+    {
+      "description": "[macEnter] メッセージアプリ: Enter→改行, Ctrl+Enter→送信",
+      "manipulators": [
+        {
+          "description": "Ctrl+Enter → 送信(素のEnter)",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^jp\\.naver\\.line\\.mac$",
+                "^com\\.tinyspeck\\.slackmacgap$",
+                "^com\\.hnc\\.Discord$",
+                "^com\\.apple\\.MobileSMS$",
+                "^com\\.openai\\.codex$",
+                "^com\\.meta\\.endo$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["caps_lock"]
+            }
+          },
+          "to": [{ "key_code": "return_or_enter" }]
+        },
+        {
+          "description": "Enter → 改行(Shift+Enter)",
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^jp\\.naver\\.line\\.mac$",
+                "^com\\.tinyspeck\\.slackmacgap$",
+                "^com\\.hnc\\.Discord$",
+                "^com\\.apple\\.MobileSMS$",
+                "^com\\.openai\\.codex$",
+                "^com\\.meta\\.endo$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "optional": ["caps_lock"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["left_shift"]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
