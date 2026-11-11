@@ -381,7 +381,8 @@
                 "^com\\.hnc\\.Discord$",
                 "^com\\.apple\\.MobileSMS$",
                 "^com\\.openai\\.codex$",
-                "^com\\.meta\\.endo$"
+                "^com\\.meta\\.endo$",
+                "^com\\.github\\.githubapp$"
               ]
             }
           ],
@@ -406,7 +407,8 @@
                 "^com\\.hnc\\.Discord$",
                 "^com\\.apple\\.MobileSMS$",
                 "^com\\.openai\\.codex$",
-                "^com\\.meta\\.endo$"
+                "^com\\.meta\\.endo$",
+                "^com\\.github\\.githubapp$"
               ]
             }
           ],
